@@ -3,14 +3,14 @@ import Towns from './Towns';
 
 
 const Cities = (props) => {
-    const [click1,setClick1] = useState(false);
+    const [click2,setClick2] = useState(false);
     return (
         <>
-               <li onClick={()=> setClick1(!click1)}  id={`city${props.id}`}>
+               <li onClick={()=> setClick2(!click2)}  id={`city${props.id}`}>
                 <button>{props.city.name} </button>
             </li>
             <ul>
-                {click1 ? props.city.towns.map((town ,i) => {
+                {click2 ? props.city.towns.map((town ,i) => {
                     return (
                         <Towns town={town} key={i+1} id={i+1} />
                     )
