@@ -5,7 +5,7 @@ import Towns from './Towns';
 const Cities = (props) => {
     const [click2,setClick2] = useState(false);
     return (
-        <>
+        <React.Fragment>
                <li onClick={()=> setClick2(!click2)}  id={`city${props.id}`}>
                 <button>{props.city.name} </button>
             </li>
@@ -16,8 +16,7 @@ const Cities = (props) => {
                     )
                 }) : ""}
             </ul>
-            
-        </>
+         </React.Fragment>
     )
 }
 
