@@ -9,13 +9,13 @@ const States = (props) => {
             <div onClick={()=> setClick(!click)} id={`state${props.id}`}>
                 <button>{props.state.name} </button>
             </div>
-            <div>
+           
                 {click ? props.state.cities.map((city ,i) => {
                     return (
                         <Cities city={city} key={i+1} id={i+1} />
                     )
                 }) : ""}
-            </div>
+           
         </React.Fragment>
     )
 }
