@@ -156,15 +156,15 @@ const states = [
 ];
 
 function App() {
-
-  return <div id="main">
-    {
-  states.map((state,i)=> {
-    return( <States state={state} key={i+1} id={i+1} />)
-  } )
+  return (
+    <div id="main">
+      <ul>
+      {states.map((state,index)=>{
+        return <States key={index+1} states={state} id={index+1} />
+      })}
+      </ul>
+  </div>
+  )
 }
-
-</div>
- }
 
 export default App;
